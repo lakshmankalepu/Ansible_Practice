@@ -1,0 +1,9 @@
+- name: this command will run on remote machine
+  hosts: mymachines
+  tasks:
+  - name: lets try to run the commands  
+    ansible.builtin.file:
+      path: /home/ansiblemadhu/Templates/sample/madhu.txt
+      state: touch
+      mode: "777"
+

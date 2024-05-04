@@ -1,0 +1,13 @@
+- name: accessing vars from file
+  hosts: mymachines
+  vars_prompt:
+  - name: username
+    prompt: enter username
+    private: false
+  - name: password
+    prompt: enter your password
+    private: true  
+  tasks:
+  - name: extracting vars from inventory file
+    ansible.builtin.debug:
+      msg: "I am learning {{username}} from joindevops trainer {{password}} with the duration."

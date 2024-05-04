@@ -1,0 +1,10 @@
+---
+
+- name: this is also a sample program
+  hosts: mymachines
+  tasks:
+    - name: display some message
+      ansible.builtin.debug:
+        msg: "this is a sample program"
+   
+

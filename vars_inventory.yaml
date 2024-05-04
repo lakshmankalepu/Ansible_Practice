@@ -1,0 +1,6 @@
+- name: variables from inventory file
+  hosts: mymachines
+  tasks:
+  - name: extracting variables from inventory file
+    ansible.builtin.debug:
+      msg: "Minimum qualification for devops is {{qualification}}"

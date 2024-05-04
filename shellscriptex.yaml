@@ -1,0 +1,6 @@
+- name: shell script commands execution
+  hosts: mymachines
+  become: yes
+  tasks:
+  - name: lets run the below command on remote machine
+    ansible.builtin.shell: "echo 'hello world! i am from ansible shell module' > /home/ansiblemadhu/Templates/ansible_script.txt"

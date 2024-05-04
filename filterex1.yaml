@@ -1,0 +1,13 @@
+- name: filters excerices one
+  hosts: mymachines
+  tasks: 
+  - name: print default value
+    ansible.builtin.debug:
+      msg: "hello {{KT | default('ansible') }}"
+  - name: printing default into upper case and lower cases
+    vars:
+      KT: "AzureDevOps"
+    ansible.builtin.debug:
+      msg:
+      - "{{KT | upper}}"
+      - "{{KT | lower}}"

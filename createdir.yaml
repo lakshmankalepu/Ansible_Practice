@@ -1,0 +1,8 @@
+- name: create a directory
+  hosts: mymachines
+  tasks:
+  - name: lets create a directory on remote machine
+    ansible.builtin.file:
+      path: /home/ansiblemadhu/Templates
+      state: directory
+      

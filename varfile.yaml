@@ -1,0 +1,8 @@
+- name: accessing vars from file
+  hosts: mymachines
+  vars_files:
+  - vars_ex.yaml
+  tasks:
+  - name: extracting vars from vars_ex file
+    ansible.builtin.debug:
+      msg: "I am learning {{course}} from joindevops trainer {{trainer}} with the duration {{duration}}}"

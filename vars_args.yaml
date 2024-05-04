@@ -1,0 +1,6 @@
+- name: varibales from arguments
+  hosts: mymachines
+  tasks:
+  - name: get a variable from cmd prompt
+    ansible.builtin.debug:
+      msg: "hello {{robo}}, good {{wishes}}"

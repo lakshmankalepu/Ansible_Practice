@@ -1,0 +1,13 @@
+- name: this is just a sample program
+  hosts: mymachines
+  vars:
+    cities:
+    - northeast
+    - southeast 
+    - midwest
+  tasks:
+  - name: calling vars one by one
+    ansible.builtin.debug:
+       msg: "this is hello {{cities}} world!:"
+
+

@@ -1,0 +1,10 @@
+- name: this command will run on remote machine
+  hosts: mymachines
+  tasks:
+  - name: lets try to run the commands  
+    ansible.builtin.file:
+     path: /home/ansiblemadhu/Templates
+     state: directory
+  - name: lets run the following commands on remote machine
+    ansible.builtin.shell:
+      cmd: "echo 'ls /home/ansiblemadhu/' > /home/ansiblemadhu/Templates/script.txt"    
