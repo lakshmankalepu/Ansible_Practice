@@ -2,7 +2,7 @@
   hosts: mymachines
   become: yes
   vars:
-    login_host: 192.168.29.226
+    login_host: db.cloudengine.cloud
   vars_prompt:
   - name: mysql_root_password
     prompt: enter root password for mysql server
@@ -22,7 +22,7 @@
       name: 
       - pymysql
       - cryptography
-      executable: pip2.7 
+      executable: pip3.9 
   - name: check DB connection
     community.mysql.mysql_info:
       login_user: root
